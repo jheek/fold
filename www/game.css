@@ -1,0 +1,183 @@
+html {
+	background-color: lightgrey;
+}
+
+#left_square {
+	background-color: white;
+	position: absolute;
+	width: 250px;
+	height: 250px;
+	left: 50px;
+	top: 100px;
+	border-radius: 3px 0px 0px 3px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+}
+
+#left_circle {
+	background-color: white;
+	position: absolute;
+	width: 125px;
+	height: 125px;
+	left: 112.5px;
+	top: 162.5px;
+	border-radius: 100%;
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+}
+
+#right_square {
+	background-color: white;
+	position: absolute;
+	width: 250px;
+	height: 250px;
+	left: 300.5px;
+	top: 100px;
+	border-radius: 0px 3px 3px 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+}
+
+#right_circle {
+	background-color: white;
+	position: absolute;
+	width: 125px;
+	height: 125px;
+	left: 363px;
+	top: 162.5px;
+	border-radius: 100%;
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+}
+
+#controls {
+	position: absolute;
+	top: 50px;
+	left: 50px;
+}
+
+#controls input[type="text"] {
+	border-style: solid;
+	border-width: 1px;
+	border-color: darkgrey;
+	border-radius: 3px;
+}
+
+#controls input[type="text"]:focus {
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	border-radius: 3px;
+	outline: none;
+}
+
+#controls input[type="button"] {
+	background-color: white;
+	border-style: solid;
+	border-width: 1px;
+	border-color: darkgrey;
+	border-radius: 3px;
+	outline: none;
+}
+
+#controls input[type="button"]:hover {
+	border-color: black;
+}
+
+#bar {
+	background-color: white;
+	position: absolute;
+	width: 500px;
+	height: 50px;
+	left: 50px;
+	top: 400px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: darkgrey;
+	border-radius: 3px;
+}
+
+#progress {
+	background-color: orange;
+	position: absolute;
+	height: 50px;
+	left: 51px;
+	top: 401px;
+	-webkit-transition: width 0.5s;
+    transition: width 0.5s;
+    -webkit-transition-timing-function: linear; /* Safari and Chrome */
+    transition-timing-function: linear;
+}
+
+#scoreboard {
+	position: absolute;
+	left: 33px;
+	top: 500px;
+}
+
+#name1, #name2, #name3, #name4, 
+#name5, #name6, #name7, #name8 {
+	height: 33px;
+	text-align: center;
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: darkgrey;
+	outline: none;
+}
+
+#name1:focus, #name2:focus, #name3:focus, #name4:focus, 
+#name5:focus, #name6:focus, #name7:focus, #name8:focus {
+	border-color: black;
+}
+
+#minus_button1, #minus_button2, #minus_button3, #minus_button4, 
+#minus_button5, #minus_button6, #minus_button7, #minus_button8 {
+	background-color: red;
+	color: white;
+	text-align: center;
+	width: 33px;
+	height: 33px;
+	border-radius: 100%;
+	border-style: none;
+	outline: none;
+}
+
+#score1, #score2, #score3, #score4, 
+#score5, #score6, #score7, #score8 {
+	background-color: orange;
+	color: white;
+	text-align: center;
+	width: 33px;
+	height: 33px;
+	border-radius: 100%;
+	border-style: none;
+	outline: none;
+}
+
+#plus_button1, #plus_button2, #plus_button3, #plus_button4, 
+#plus_button5, #plus_button6, #plus_button7, #plus_button8 {
+	background-color: green;
+	color: white;
+	text-align: center;
+	width: 33px;
+	height: 33px;
+	border-radius: 100%;
+	border-style: none;
+	outline: none;
+}
+
+#minus_button1:hover, #minus_button2:hover, #minus_button3:hover, #minus_button4:hover, 
+#minus_button5:hover, #minus_button6:hover, #minus_button7:hover, #minus_button8:hover,
+#score1:hover, #score2:hover, #score3:hover, #score4:hover, 
+#score5:hover, #score6:hover, #score7:hover, #score8:hover,
+#plus_button1:hover, #plus_button2:hover, #plus_button3:hover, #plus_button4:hover, 
+#plus_button5:hover, #plus_button6:hover, #plus_button7:hover, #plus_button8:hover {
+	border-style: solid;
+	border-width: 1px;
+	border-color: darkgrey;
+}
