@@ -1,0 +1,91 @@
+<html>
+<head>
+ <title>Game</title>
+ <script src="game.js"></script>
+ <link rel="stylesheet" type="text/css" href="game.css">
+</head>
+<body>
+ <div id="left_square"></div>
+ <div id="left_circle"></div>
+ <div id="right_square"></div>
+ <div id="right_circle"></div>
+ <div id="bar"></div>
+ <div id="progress"></div>
+ <div id="controls">
+   <form>
+   <input type="button" id="start_button" value="start" onClick="start_game()">
+   <input type="text" id="timer" value="..." readonly>
+   <input type="text" id="game_time" value="40">
+   <input type="checkbox" id="hidden_part_check"> Hidden part
+  </form>
+ </div>
+ <div id="scoreboard">
+  <ol>
+   <li> 
+    <form> 
+     <input type="text" id="name1">
+     <input type="button" id="minus_button1" value="-" onclick="scoreboard(-1, 'score1')">
+     <input type="text" id="score1" value="0" readonly> 
+     <input type="button" id="plus_button1" value="+" onclick="scoreboard(+1, 'score1')">
+    </form>
+   </li>
+   <li>
+    <form> 
+     <input type="text" id="name2">
+     <input type="button" id="minus_button2" value="-" onclick="scoreboard(-1, 'score2')">
+     <input type="text" id="score2" value="0" readonly> 
+     <input type="button" id="plus_button2" value="+" onclick="scoreboard(+1, 'score2')">
+    </form>
+   </li>
+   <li>
+    <form> 
+     <input type="text" id="name3">
+     <input type="button" id="minus_button3" value="-" onclick="scoreboard(-1, 'score3')">
+     <input type="text" id="score3" value="0" readonly> 
+     <input type="button" id="plus_button3" value="+" onclick="scoreboard(+1, 'score3')">
+    </form>
+   </li>
+   <li>
+    <form> 
+     <input type="text" id="name4">
+     <input type="button" id="minus_button4" value="-" onclick="scoreboard(-1, 'score4')">
+     <input type="text" id="score4" value="0" readonly> 
+     <input type="button" id="plus_button4" value="+" onclick="scoreboard(+1, 'score4')">
+    </form>
+   </li>
+   <li>
+    <form> 
+     <input type="text" id="name5">
+     <input type="button" id="minus_button5" value="-" onclick="scoreboard(-1, 'score5')">
+     <input type="text" id="score5" value="0" readonly> 
+     <input type="button" id="plus_button5" value="+" onclick="scoreboard(+1, 'score5')">
+    </form>
+   </li>
+   <li>
+    <form> 
+     <input type="text" id="name6">
+     <input type="button" id="minus_button6" value="-" onclick="scoreboard(-1, 'score6')">
+     <input type="text" id="score6" value="0" readonly> 
+     <input type="button" id="plus_button6" value="+" onclick="scoreboard(+1, 'score6')">
+    </form>
+   </li>
+   <li>
+    <form> 
+     <input type="text" id="name7">
+     <input type="button" id="minus_button7" value="-" onclick="scoreboard(-1, 'score7')">
+     <input type="text" id="score7" value="0" readonly> 
+     <input type="button" id="plus_button7" value="+" onclick="scoreboard(+1, 'score7')">
+    </form>
+   </li>
+   <li>
+    <form> 
+     <input type="text" id="name8">
+     <input type="button" id="minus_button8" value="-" onclick="scoreboard(-1, 'score8')">
+     <input type="text" id="score8" value="0" readonly> 
+     <input type="button" id="plus_button8" value="+" onclick="scoreboard(+1, 'score8')">
+    </form>
+   </li>
+  </ol>
+ </div>
+</body>
+</html>

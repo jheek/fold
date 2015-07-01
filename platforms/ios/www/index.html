@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html ng-app="app">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="lib/angular-material/angular-material.css" />
+        
+        <title>Game</title>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="lib/angular/angular.js"></script>
+        <script type="text/javascript" src="lib/angular-animate/angular-animate.js"></script>
+        <script type="text/javascript" src="lib/angular-aria/angular-aria.js"></script>
+        <script type="text/javascript" src="lib/angular-material/angular-material.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </head>
+    <body>
+        
+        <div ng-controller="AppCtrl">
+  <md-content>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>
+          <span>Vouw game demo</span>
+        </h2>
+        <span flex></span>
+        </div>
+    </md-toolbar>
+  </md-content>
+
+  <div class="controls" layout="column">
+
+  <md-content class="md-padding">
+      <div flex="20" layout layout-align="center center">
+        <span class="md-body-1">Duration</span>
+      </div>
+    <md-tabs md-stretch-tabs="always" md-selected="selectedDuration" md-dynamic-height md-border-bottom>
+      <md-tab label="{{op}}" ng-repeat="op in durationOptions"></md-tab>
+    </md-tabs>
+  </md-content>
+
+    <div layout="row">
+
+     <md-checkbox
+            ng-model="hiddenPart"
+            aria-label="Hidden part"
+            class="md-primary"
+            ng-disabled="playing">
+          Hidden part
+        </md-checkbox>
+    </div>
+
+     <md-button ng-class="{'md-primary': !playing, 'md-warn': playing}" class="md-raised" ng-click="playing ? stopGame() : startGame()">{{playing ? 'Stop' : 'Start'}} Game</md-button>
+    </div>
+
+
+
+ <div layout="row" class="cards">
+     <div  class="square" id="left_square" layout layout-align="center center" style="border-radius: 3px 0px 0px 3px;" ng-style="{'background-color': leftSquareColor}">
+        <div id="left_circle" class="circle" ng-style="{'background-color': leftCircleColor}"></div>
+     </div>
+     <div class="square" id="right_square" layout layout-align="center center" style="border-radius: 0px 3px 3px 0px; border-left: none" ng-style="{'background-color': rightSquareColor}">
+        <div id="right_circle" class="circle" ng-style="{'background-color': rightCircleColor}"></div>
+     </div>
+ </div>
+
+ <md-progress-linear class="progress md-accent" md-mode="determinate" ng-value="progress" ng-disabled="!playing"></md-progress-linear>
+
+ <div class="scoreboard">
+    <form>
+    <div ng-repeat="player in players" layout="row">
+        <md-input-container>
+          <label>Name</label>
+          <input ng-model="player.name">
+        </md-input-container>
+        <div layout="row" layout-align="center center">
+        <md-button class="md-fab md-warn" aria-label="min score" ng-click="player.score.pop()">-</md-button>
+        <div class="chip" ng-repeat="s in player.score track by $index"></div>
+        <md-button class="md-fab md-primary" aria-label="plus score" ng-click="player.score.push({})">+</md-button>
+        </div>
+    </div>
+ </div>
+        
+    </body>
+</html>
